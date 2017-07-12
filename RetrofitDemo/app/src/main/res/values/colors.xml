@@ -3,4 +3,20 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="subject_color">#22acfb</color>
+
+    <!--字体颜色-->
+    <color name="font_primary">#333333</color>
+    <color name="font_primary_light">#666666</color>
+
+    <!--主界面颜色-->
+    <color name="background_primary">#f5f5f5</color>
+    <color name="background_white">#ffffff</color>
+    <color name="background_gray">#666666</color>
+    <color name="background_green">#01cd57</color>
+    <color name="background_black">#000000</color>
+    <color name="background_blue">#E7F4FC</color>
+    <color name="filter_bg">#cbe6f6</color>
+
 </resources>
