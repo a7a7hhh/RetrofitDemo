@@ -12,7 +12,7 @@
         android:layout_margin="5dp"
         android:padding="5dp"
         android:textSize="@dimen/font_normal"
-        android:textColor="@color/font_primary_light"
+        android:textColor="@color/font_primary"
         android:text="@string/btn_enum"/>
     <TextView
         android:id="@+id/btn_retrofit"
@@ -22,7 +22,29 @@
         android:layout_margin="5dp"
         android:padding="5dp"
         android:textSize="@dimen/font_normal"
-        android:textColor="@color/font_primary_light"
+        android:textColor="@color/font_primary"
         android:text="@string/btn_retrofit"/>
+
+    <TextView
+        android:id="@+id/btn_sophix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_btn_background"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textSize="@dimen/font_normal"
+        android:textColor="@color/font_primary"
+        android:text="@string/btn_sophix"/>
+
+    <TextView
+        android:id="@+id/btn_rxbus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_btn_background"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textSize="@dimen/font_normal"
+        android:textColor="@color/font_primary"
+        android:text="@string/btn_rxbus"/>
 
 </LinearLayout>

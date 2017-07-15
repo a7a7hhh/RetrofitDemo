@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -15,16 +15,12 @@ import presentation.Enum.SexEnum;
 public class EnumActivity extends AppCompatActivity {
 
 
-    @BindView(R.id.tv_enum_0)
-    TextView tvEnum0;
-    @BindView(R.id.tv_enum_1)
-    TextView tvEnum1;
-    @BindView(R.id.tv_enum_2)
-    TextView tvEnum2;
-    @BindView(R.id.tv_enum_unknown)
-    TextView tvEnumUnknown;
     @BindView(R.id.enum_result)
     TextView enumResult;
+    @BindView(R.id.edt_enum)
+    EditText edtEnum;
+    @BindView(R.id.tv_enum_confirm)
+    TextView tvEnumConfirm;
 
     public static void start(Context context) {
         Intent intent = new Intent(context, EnumActivity.class);
@@ -39,21 +35,12 @@ public class EnumActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.tv_enum_0, R.id.tv_enum_1, R.id.tv_enum_2, R.id.tv_enum_unknown})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.tv_enum_0:
-                enumResult.setText(SexEnum.Unkonwn.getKey(0).toString());
-                break;
-            case R.id.tv_enum_1:
-                enumResult.setText(SexEnum.Unkonwn.getKey(1).toString());
-                break;
-            case R.id.tv_enum_2:
-                enumResult.setText(SexEnum.Unkonwn.getKey(2).toString());
-                break;
-            case R.id.tv_enum_unknown:
-                enumResult.setText(SexEnum.Unkonwn.getKey(3).toString());
-                break;
+
+    @OnClick(R.id.tv_enum_confirm)
+    public void onViewClicked() {
+        if(edtEnum.getText()!=null){
+            int value = Integer.parseInt(edtEnum.getText().toString());
+            enumResult.setText(SexEnum.Unkonwn.getKey(value).toString());
         }
     }
 }

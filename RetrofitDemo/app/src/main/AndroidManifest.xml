@@ -24,7 +24,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EnumActivity"></activity>
+        <activity android:name=".EnumActivity" />
+        <activity android:name=".SophixActivity"></activity>
+
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="24542863-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="b6d2b8762894fbac3b46ad5db43964d7" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCZ/7AKrsqFAIGWRSm/6Q8sjTn+oRrTMqqhPs0/OnUKRBiLJIshIC28J5h9e6UROx7D24w7pKYmwqgwXIJEfdA+4TX0ViIjmefMy/4BY4afhTto0Y6LhgoKf8IfRnAIl5Tn5JIJNQVLJkDntgGs9FrYMtLY8BayTugUaUMPuGn7juFC2HQ+u1AmdWm0YLCaWqKE3Jut9hLbvgLMSEQCnwtNMJgzKD7qlc2oUIPNRm2K/ioRSHzJDBiwv0JOQ9sFYu/jjySQUY+/1wSmpBTRb8mQr47N1Rt7iE0E+SCj1C7DXP1GWzBrmExHpvsCZ7Q6JoFO6NKa4PZadGAV8OLUKFNHAgMBAAECggEAMoQXQUnZEQv7dkm1ykgvPBQPpCFA5WrHYiFxvn30iquPyYTxRqqBlij+8pquqRpVmzXXqHD4N9q+xS5zZPhIaXgC9OWUSU1hJmL8LYRyUr2noVisg8QyYwNJsGywr4DZzb/Cz9ZeqCoiPGAN6Kg3bJgvZg5Lw63yn09wOiXqTiQn9PbxKimYjADtMOBVZZr+oZ2dnCjGRkiVvoFaMWkXuxcYDk8vFiN5CYzPXKyAfb/eE9ns+xOxKEzvVmFGhNsHb/Eq4f7ZTd4CY1qiogOH9iBSjfont5kmMkTxxYSnlvh8C9UFajbryVyfznmPmLLffN4b7ls9fZRUSmQxeUq4wQKBgQD/zEILjNVyjAS1T5OIi+XgcL7J8krCrNa0h+h4/T74DhoLL2EKa4zKxmj1MkmdvZDCErNCDSd0LXLNOrwVI4mGE9XEgC46ym0y11o9mU2MkX+RE7M+aUO+Srqgb9SZhetlw1XXu4Ges/2yFAlrPB3HyDIQE6ZICRFtJW4Wtihz0QKBgQCaHtaLW6ygfuo/h7i4DLyVucFHYzw0o53I7mJ/8X9O846kYrHTSWT/xi8vaxhIHmXn/GRNFZOqNH1nY+D6RrdUMtb+JBNJwatDa6EgiqGJNnAGUjbBBNM+HeCd8apO0e/IF8/E3rd2AqPE+flsPLZwCFmhD5xICqF95fRg1NuTlwKBgQDT31CZFoa5gSZpM0dlI1M9asVsqeaohtaz45p3lHNyrON/fjfnlJuiXWMULRnysNBVH34g6JpUTUy4lryw2aWQS5+VSgKAqah3Iw7Y1MD5/I3oEaQ2vqPg2y7nspkqrFUFDh1tOh8r37Pzq0r96mZUUwq8bDofkns/p3AfGbQ58QKBgHopVW+S08tHrg97WdxxJA4d9ejK7M7gndHFuselOX7wKTF9lWxfcbIXehFA9zc6+RWgBjTflHNGNdx827gl02zm+2joWW2OGF1Rc58io5XqU3N/OS1X0MUc04z+IDtnxoM49JQc4RimUP9yENVNbmJxC/JROFQWMRlk64bRUdazAoGBAJb28E8MDggR0Caip8mNMZt2L1LJ5B5kfsmy9TGiBy/21ah4plJZMS42hgMQlRhe8Goqo/cdWUDUIxTCaye7ImDXm/y8kRfIndbHYLwk8T+omNUF/lPp5wf4+/bUCgjNGMAgNcYClVWNA31F0gGCCbi6owCaacFYL6zDdtCI318u" />
     </application>
 
 </manifest>

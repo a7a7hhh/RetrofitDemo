@@ -2,5 +2,8 @@
     <string name="app_name">RetrofitDemo</string>
     <string name="btn_enum">枚举实例</string>
     <string name="btn_retrofit">retrofit实例</string>
+    <string name="btn_sophix">sophix实例</string>
+    <string name="btn_rxbus">rxbus实例</string>
     <string name="enum_explain">点击上面一个按钮筛选客户性别: </string>
+    <string name="sophix_check">检测/加载补丁  2</string>
 </resources>

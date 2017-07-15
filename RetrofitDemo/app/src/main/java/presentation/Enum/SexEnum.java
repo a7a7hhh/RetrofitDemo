@@ -9,15 +9,15 @@ public enum SexEnum {
     /**
      * 男性
      */
-    男性(0),
+    man(0),
     /**
      * 女性
      */
-    女性(1),
+    women(1),
     /**
      * 人妖
      */
-    人妖(2);
+    hentai(2);
 
     private int value;
 
@@ -33,13 +33,13 @@ public enum SexEnum {
         SexEnum key = null;
         switch (value){
             case 0:
-                key = 男性;
+                key = man;
                 break;
             case 1:
-                key = 女性;
+                key = women;
                 break;
             case 2:
-                key = 人妖;
+                key = hentai;
                 break;
             default:
                 key = Unkonwn;
