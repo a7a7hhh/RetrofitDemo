@@ -1,4 +1,4 @@
-package com.example.winkey.retrofitdemo;
+package com.example.winkey.retrofitdemo.view.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,10 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.winkey.retrofitdemo.R;
+import com.example.winkey.retrofitdemo.presentation.Enum.SexEnum;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import presentation.Enum.SexEnum;
 
 public class EnumActivity extends AppCompatActivity {
 

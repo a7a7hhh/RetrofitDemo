@@ -1,4 +1,4 @@
-package com.example.winkey.retrofitdemo;
+package com.example.winkey.retrofitdemo.view.activity;
 
 import android.app.Application;
 import android.util.Log;

@@ -1,4 +1,4 @@
-package presentation.Enum;
+package com.example.winkey.retrofitdemo.presentation.Enum;
 
 /**
  * Created by Winkey on 2017/7/12.
