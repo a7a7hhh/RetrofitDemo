@@ -1,0 +1,91 @@
+{
+  "Sections": [
+    {
+      "name": "状态",
+      "key": "Progresses",
+      "isRadio": false,
+      "values": [
+        {
+          "name": "待到访",
+          "value": 10
+        },
+        {
+          "name": "已到访",
+          "value": 20
+        },
+        {
+          "name": "已认购",
+          "value": 30
+        },
+        {
+          "name": "已签约",
+          "value": 40
+        },
+        {
+          "name": "结佣审核中",
+          "value": 50
+        },
+        {
+          "name": "已完结",
+          "value": 99
+        },
+        {
+          "name": "无效客户",
+          "value": -1
+        }
+      ]
+    },
+    {
+      "name": "意向等级",
+      "key": "IntentionLevels",
+      "values": [
+        {
+          "name": "A",
+          "value": 90
+        },
+        {
+          "name": "B",
+          "value": 80
+        },
+        {
+          "name": "C",
+          "value": 70
+        },
+        {
+          "name": "D",
+          "value": 60
+        }
+      ]
+    },
+    {
+      "name": "经纪人带访",
+      "key": "IsTakenBySelf",
+      "isRadio": false,
+      "values": [
+        {
+          "name": "带访",
+          "value": true
+        },
+        {
+          "name": "不带访",
+          "value": false
+        }
+      ]
+    },
+    {
+      "name": "渠道",
+      "key": "Channels",
+      "isRadio": false,
+      "values": [
+        {
+          "name": "经纪人",
+          "value":0
+        },
+        {
+          "name": "外拓",
+          "value": 3
+        }
+      ]
+    }
+  ]
+}
