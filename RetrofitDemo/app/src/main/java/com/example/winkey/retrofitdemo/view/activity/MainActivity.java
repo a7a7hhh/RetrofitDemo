@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 EnumActivity.start(this);
                 break;
             case R.id.btn_retrofit:
+                RetrofitActivity.start(this);
                 break;
             case R.id.btn_sophix:
                 SophixActivity.start(this);

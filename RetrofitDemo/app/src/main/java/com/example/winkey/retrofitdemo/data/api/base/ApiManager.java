@@ -1,6 +1,7 @@
-package data.api.base;
+package com.example.winkey.retrofitdemo.data.api.base;
 
-import data.api.ApiService;
+import com.example.winkey.retrofitdemo.data.api.ApiService;
+import com.example.winkey.retrofitdemo.view.utils.Logger;
 
 /**
  * Created by Winkey on 2017/7/7.
@@ -28,6 +29,11 @@ public class ApiManager {
 
     public ApiService getApiService() {
         mApiService = ApiServiceFactory.getInstance().provideApiService(ApiConfig.IS_TEST ? ApiConfig.TEST_HOST : ApiConfig.HOST);
+        return mApiService;
+    }
+
+    public ApiService getDownloadService() {
+        mApiService = ApiServiceFactory.getInstance().provideDownloadService(ApiConfig.IS_TEST ? ApiConfig.TEST_HOST : ApiConfig.HOST);
         return mApiService;
     }
 }
