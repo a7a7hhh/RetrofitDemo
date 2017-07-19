@@ -7,7 +7,7 @@ import android.os.Parcelable;
  * Created by Winkey on 2017/7/18.
  */
 
-public class Download implements Parcelable {
+public class Download{
 
     private int progress;
     private long currentFileSize;
@@ -37,36 +37,4 @@ public class Download implements Parcelable {
         this.totalFileSize = totalFileSize;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(this.progress);
-        dest.writeLong(this.currentFileSize);
-        dest.writeLong(this.totalFileSize);
-    }
-
-    public Download() {
-    }
-
-    protected Download(Parcel in) {
-        this.progress = in.readInt();
-        this.currentFileSize = in.readLong();
-        this.totalFileSize = in.readLong();
-    }
-
-    public static final Parcelable.Creator<Download> CREATOR = new Parcelable.Creator<Download>() {
-        @Override
-        public Download createFromParcel(Parcel source) {
-            return new Download(source);
-        }
-
-        @Override
-        public Download[] newArray(int size) {
-            return new Download[size];
-        }
-    };
 }

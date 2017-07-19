@@ -14,7 +14,6 @@ public class BaseSubscriber<T> extends Subscriber<T> {
     private CallBackListener<T> callBackListener;
     @Override
     public void onCompleted() {
-
     }
 
     @Override
@@ -24,7 +23,6 @@ public class BaseSubscriber<T> extends Subscriber<T> {
 
     @Override
     public void onNext(T t) {
-        Logger.debug("onNext");
         if(callBackListener!=null){
             callBackListener.callBack(t);
         }

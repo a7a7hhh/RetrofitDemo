@@ -20,7 +20,7 @@ public interface ApiService {
 
     @Streaming
     @GET
-    Observable<Download> download(@Url String url);
+    Observable<ResponseBody> download(@Url String url);
 
     /**
      * 获取Banner数据

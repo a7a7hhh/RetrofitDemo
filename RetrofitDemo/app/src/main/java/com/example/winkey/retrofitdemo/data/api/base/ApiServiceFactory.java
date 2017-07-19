@@ -36,6 +36,7 @@ public class ApiServiceFactory {
     }
 
     /**
+     * 指定ApiService的接口，会通过retrofit.create创建一个对应的类
      * @param baseUrl
      * @return
      */
@@ -51,40 +52,9 @@ public class ApiServiceFactory {
      */
     private OkHttpClient.Builder provideOkhttpClient() {
 
-        Logger.debug("提供OkhttpClient");
         OkHttpClient.Builder client = new OkHttpClient.Builder();
         client.connectTimeout(60 * 1000, TimeUnit.MILLISECONDS);
         client.readTimeout(60 * 1000, TimeUnit.MILLISECONDS);
-        //ProgressHelper.addClient(client);
-        //client.addInterceptor(new TokenInterceptor());
-//        File cacheDir = new File(App.getInstance().getCacheDir(), "response");
-//        //缓存的最大尺寸10m
-//        Cache cache = new Cache(cacheDir, 1024 * 1024 * 10);
-//        client.cache(cache);
-//        client.addNetworkInterceptor(netWorkInterceptor());
-        return client;
-    }
-
-    /**
-     * @param baseUrl
-     * @return
-     */
-    public ApiService provideDownloadService(String baseUrl) {
-        OkHttpClient.Builder client = provideDownloadClient();
-        Retrofit retrofit = provideRestAdapter(client, baseUrl);
-        return retrofit.create(ApiService.class);
-    }
-
-
-    /**
-     * 提供Okhttp
-     * @return
-     */
-    private OkHttpClient.Builder provideDownloadClient() {
-        OkHttpClient.Builder client = new OkHttpClient.Builder();
-        client.connectTimeout(60 * 1000, TimeUnit.MILLISECONDS);
-        client.readTimeout(60 * 1000, TimeUnit.MILLISECONDS);
-        DownloadProgressHelper.addClient(client);
         //ProgressHelper.addClient(client);
         //client.addInterceptor(new TokenInterceptor());
 //        File cacheDir = new File(App.getInstance().getCacheDir(), "response");
@@ -103,7 +73,6 @@ public class ApiServiceFactory {
      * @return
      */
     private Retrofit provideRestAdapter(OkHttpClient.Builder client, String baseUrl) {
-        Logger.debug("提供Retrofit");
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create()) // 添加Rx适配器
@@ -112,4 +81,35 @@ public class ApiServiceFactory {
                 .build();
         return retrofit;
     }
+
+    /**
+     * @param baseUrl
+     * @return
+     */
+    public ApiService provideDownloadService(String baseUrl) {
+        OkHttpClient.Builder client = provideDownloadClient();
+        Retrofit retrofit = provideRestAdapter(client, baseUrl);
+        return retrofit.create(ApiService.class);
+    }
+
+
+    /**
+     * 提供Download专有的 OkhttpClient，与之前的不同添加了一个网络拦截器
+     * @return
+     */
+    private OkHttpClient.Builder provideDownloadClient() {
+        OkHttpClient.Builder client = new OkHttpClient.Builder();
+        client.connectTimeout(60 * 1000, TimeUnit.MILLISECONDS);
+        client.readTimeout(60 * 1000, TimeUnit.MILLISECONDS);
+        DownloadProgressHelper.addClient(client);
+        //ProgressHelper.addClient(client);
+        //client.addInterceptor(new TokenInterceptor());
+//        File cacheDir = new File(App.getInstance().getCacheDir(), "response");
+//        //缓存的最大尺寸10m
+//        Cache cache = new Cache(cacheDir, 1024 * 1024 * 10);
+//        client.cache(cache);
+//        client.addNetworkInterceptor(netWorkInterceptor());
+        return client;
+    }
+
 }
