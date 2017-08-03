@@ -31,7 +31,7 @@
         <activity android:name=".view.activity.SophixActivity"></activity>
         <activity android:name=".view.activity.FilterActivity"></activity>
         <activity android:name=".view.activity.RetrofitActivity"></activity>
-
+        <activity android:name=".view.activity.AlbumActivity"></activity>
         <meta-data
             android:name="com.taobao.android.hotfix.IDSECRET"
             android:value="24542863-1" />

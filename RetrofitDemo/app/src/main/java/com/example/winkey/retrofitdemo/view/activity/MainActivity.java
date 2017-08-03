@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     TextView btnRxbus;
     @BindView(R.id.btn_filter)
     TextView btnFilter;
+    @BindView(R.id.btn_album)
+    TextView btnAlbum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_enum, R.id.btn_retrofit, R.id.btn_sophix,R.id.btn_rxbus,R.id.btn_filter})
+    @OnClick({R.id.btn_enum, R.id.btn_retrofit, R.id.btn_sophix,R.id.btn_rxbus,R.id.btn_filter,R.id.btn_album})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_enum:
@@ -50,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_filter:
                 FilterActivity.start(this);
+                break;
+            case R.id.btn_album:
+                AlbumActivity.start(this);
                 break;
         }
     }

@@ -5,6 +5,7 @@
     <string name="btn_sophix">sophix实例</string>
     <string name="btn_rxbus">rxbus实例</string>
     <string name="btn_filter">filter实例</string>
+    <string name="btn_album">相册实例</string>
 
 
     <string name="enum_explain">点击上面一个按钮筛选客户性别: </string>
