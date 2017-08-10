@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.example.winkey.retrofitdemo.R;
+import com.example.winkey.retrofitdemo.view.utils.Logger;
 import com.taobao.sophix.PatchStatus;
 import com.taobao.sophix.SophixManager;
 import com.umeng.message.PushAgent;
@@ -49,6 +50,7 @@ public class SophixActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         tvSophixDetails.setText(msg);
+                        Logger.debug(msg);
                     }
                 });
             }
