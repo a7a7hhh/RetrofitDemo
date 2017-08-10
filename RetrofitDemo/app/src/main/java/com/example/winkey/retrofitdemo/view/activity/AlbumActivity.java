@@ -8,6 +8,7 @@ import com.example.winkey.retrofitdemo.R;
 import com.example.winkey.retrofitdemo.view.activity.base.BaseActivity;
 import com.example.winkey.retrofitdemo.view.fragment.AlbumFragment;
 import com.example.winkey.retrofitdemo.view.fragment.FilterFragment;
+import com.umeng.message.PushAgent;
 
 /**
  * Created by Winkey on 2017/7/24.
@@ -27,6 +28,7 @@ public class AlbumActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        PushAgent.getInstance(this).onAppStart();
         addFragment(R.id.fl_root,mFragment);
         status();
     }

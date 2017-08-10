@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.winkey.retrofitdemo.R;
 import com.example.winkey.retrofitdemo.presentation.Enum.SexEnum;
+import com.umeng.message.PushAgent;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,6 +33,7 @@ public class EnumActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        PushAgent.getInstance(this).onAppStart();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enum);
         ButterKnife.bind(this);

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.winkey.retrofitdemo.R;
 import com.taobao.sophix.PatchStatus;
 import com.taobao.sophix.SophixManager;
+import com.umeng.message.PushAgent;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,6 +38,7 @@ public class SophixActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        PushAgent.getInstance(this).onAppStart();
         setContentView(R.layout.activity_sophix);
         ButterKnife.bind(this);
 

@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.example.winkey.retrofitdemo.R;
 import com.example.winkey.retrofitdemo.view.utils.Logger;
+import com.umeng.message.PushAgent;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,17 +26,20 @@ public class MainActivity extends AppCompatActivity {
     TextView btnRxbus;
     @BindView(R.id.btn_filter)
     TextView btnFilter;
-    @BindView(R.id.btn_album)
-    TextView btnAlbum;
+    @BindView(R.id.btn_zuni)
+    TextView btnZuni;
+    @BindView(R.id.btn_upush)
+    TextView btnUpush;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        PushAgent.getInstance(this).onAppStart();
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_enum, R.id.btn_retrofit, R.id.btn_sophix,R.id.btn_rxbus,R.id.btn_filter,R.id.btn_album})
+    @OnClick({R.id.btn_enum, R.id.btn_retrofit, R.id.btn_sophix,R.id.btn_rxbus,R.id.btn_filter,R.id.btn_zuni,R.id.btn_upush})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_enum:
@@ -53,9 +57,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_filter:
                 FilterActivity.start(this);
                 break;
-            case R.id.btn_album:
-                AlbumActivity.start(this);
+            case R.id.btn_zuni:
+                ZuniActivity.start(this);
                 break;
+            case R.id.btn_upush:
+                UpushActivity.start(this);
+                break;
+
         }
     }
 

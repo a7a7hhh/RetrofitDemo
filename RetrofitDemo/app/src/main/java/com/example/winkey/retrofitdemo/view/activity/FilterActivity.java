@@ -10,6 +10,7 @@ import com.example.winkey.retrofitdemo.R;
 import com.example.winkey.retrofitdemo.view.activity.base.BaseActivity;
 import com.example.winkey.retrofitdemo.view.fragment.FilterFragment;
 import  com.example.winkey.retrofitdemo.view.utils.Logger;
+import com.umeng.message.PushAgent;
 
 
 /**
@@ -30,6 +31,7 @@ public class FilterActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        PushAgent.getInstance(this).onAppStart();
         addFragment(R.id.fl_root,mFragment);
         status();
     }

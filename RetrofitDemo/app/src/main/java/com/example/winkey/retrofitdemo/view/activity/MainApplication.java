@@ -4,9 +4,9 @@ import android.app.Application;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.taobao.sophix.PatchStatus;
-import com.taobao.sophix.SophixManager;
-import com.taobao.sophix.listener.PatchLoadStatusListener;
+import com.example.winkey.retrofitdemo.view.utils.Logger;
+import com.umeng.message.IUmengRegisterCallback;
+import com.umeng.message.PushAgent;
 
 /**
  * Created by Winkey on 2017/7/12.
@@ -24,14 +24,17 @@ public class MainApplication extends Application {
     public static MsgDisplayListener msgDisplayListener = null;
     public static MsgCoderListener msgCoderListener = null;
     public static StringBuilder cacheMsg = new StringBuilder();
+
     @Override
     public void onCreate() {
         super.onCreate();
-        initHotfix();
+        //initHotfix();
+        initUpush();
     }
 
+    //阿里热修复初始化
     private void initHotfix() {
-        String appVersion;
+       /* String appVersion;
         try {
             appVersion = this.getPackageManager().getPackageInfo(this.getPackageName(), 0).versionName;
         } catch (Exception e) {
@@ -54,19 +57,19 @@ public class MainApplication extends Application {
                         if (msgDisplayListener != null) {
                             msgDisplayListener.handle(msg);
                             msgCoderListener.handle(code);
-                            Log.e("***","handle msg");
+                            Log.e("***", "handle msg");
                         } else {
                             cacheMsg.append("\n").append(msg);
                         }
                         // 补丁加载回调通知
                         if (code == PatchStatus.CODE_LOAD_SUCCESS) {
                             // 表明补丁加载成功
-                            Log.e("***","Download patch");
+                            Log.e("***", "Download patch");
                         } else if (code == PatchStatus.CODE_LOAD_RELAUNCH) {
                             // 表明新补丁生效需要重启. 开发者可提示用户或者强制重启;
                             // 建议: 用户可以监听进入后台事件, 然后应用自杀
                             //Toast.makeText(MainApplication.this, "发现新补丁", Toast.LENGTH_SHORT).show();
-                            Log.e("***","Download patch  please restart");
+                            Log.e("***", "Download patch  please restart");
                         } else if (code == PatchStatus.CODE_LOAD_FAIL) {
                             // 内部引擎异常, 推荐此时清空本地补丁, 防止失败补丁重复加载
                             // SophixManager.getInstance().cleanPatches();
@@ -75,6 +78,25 @@ public class MainApplication extends Application {
                         }
                     }
                 }).initialize();
-        Log.e("***","appVersion"+appVersion);
+        Log.e("***", "appVersion" + appVersion);*/
+    }
+
+    //umeng push初始化
+    private void initUpush() {
+        PushAgent mPushAgent = PushAgent.getInstance(this);
+        //注册推送服务，每次调用register方法都会回调该接口
+        mPushAgent.register(new IUmengRegisterCallback() {
+
+            @Override
+            public void onSuccess(String deviceToken) {
+                Logger.debug("xwb register upush success :deviceToken:"+deviceToken);
+                //注册成功会返回device token
+            }
+
+            @Override
+            public void onFailure(String s, String s1) {
+                Logger.debug("xwb register upush failure "+s+";+"+s1);
+            }
+        });
     }
 }

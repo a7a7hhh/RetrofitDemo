@@ -57,8 +57,10 @@
         android:textSize="@dimen/font_normal"
         android:textColor="@color/font_primary"
         android:text="@string/btn_filter"/>
+
+
     <TextView
-        android:id="@+id/btn_album"
+        android:id="@+id/btn_zuni"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_btn_background"
@@ -66,6 +68,16 @@
         android:padding="5dp"
         android:textSize="@dimen/font_normal"
         android:textColor="@color/font_primary"
-        android:text="@string/btn_album"/>
+        android:text="@string/btn_zuni"/>
+    <TextView
+        android:id="@+id/btn_upush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_btn_background"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textSize="@dimen/font_normal"
+        android:textColor="@color/font_primary"
+        android:text="@string/btn_upush"/>
 
 </LinearLayout>

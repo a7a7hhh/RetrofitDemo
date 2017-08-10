@@ -23,6 +23,7 @@ import com.example.winkey.retrofitdemo.presentation.presenter.base.CallBackListe
 import com.example.winkey.retrofitdemo.presentation.presenter.download.DownloadPresenter;
 import com.example.winkey.retrofitdemo.view.utils.FileUtils;
 import com.example.winkey.retrofitdemo.view.utils.Logger;
+import com.umeng.message.PushAgent;
 
 import java.io.InputStream;
 
@@ -89,6 +90,7 @@ public class RetrofitActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        PushAgent.getInstance(this).onAppStart();
         setContentView(R.layout.activity_retrofit);
         ButterKnife.bind(this);
         checkPermission();
