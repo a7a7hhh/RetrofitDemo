@@ -8,6 +8,7 @@ import com.example.winkey.retrofitdemo.R;
 import com.example.winkey.retrofitdemo.view.activity.base.BaseActivity;
 import com.example.winkey.retrofitdemo.view.fragment.AlbumFragment;
 import com.example.winkey.retrofitdemo.view.fragment.FilterFragment;
+import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
 
 /**
